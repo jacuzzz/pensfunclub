@@ -1,0 +1,167 @@
+<!DOCTYPE html>
+<html lang="pl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>.100PENS - Najlepsi z najmłodszych!</title>
+    <link rel="stylesheet" href="style.css" type="text/css">
+    <!---->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Mulish:ital,wght@0,200..1000;1,200..1000&display=swap" rel="stylesheet">
+    <style>
+        @keyframes borderAnimation {
+            0% {
+                background-position: 0% 50%;
+            }
+            50% {
+                background-position: 100% 50%;
+            }
+            100% {
+                background-position: 0% 50%;
+            }
+        }
+    
+        form {
+            margin: 0 auto;
+            padding: 20px;
+            background: #161b22;
+            border: 1px solid #30363d;
+            border-radius: 10px;
+            max-width: 500px;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.2);
+        }
+    
+        label {
+            display: block;
+            margin-bottom: 15px;
+            text-align: left;
+            font-weight: bold;
+            color: #e6edf3;
+            font-size: 1.1rem;
+        }
+    
+        input, textarea {
+            width: 95%;
+            padding: 10px;
+            border: 1px solid #30363d;
+            border-radius: 5px;
+            background: #0d1117;
+            color: #e6edf3;
+            font-size: 1rem;
+            margin-top: 5px;
+        }
+    
+        input:focus, textarea:focus {
+            outline: none;
+            border-color: #58a6ff;
+            box-shadow: 0 0 5px rgba(88, 166, 255, 0.5);
+        }
+    
+        button {
+            display: block;
+            width: 100%;
+            padding: 10px;
+            background: #238636;
+            border: none;
+            border-radius: 5px;
+            color: #ffffff;
+            font-size: 1rem;
+            font-weight: bold;
+            cursor: pointer;
+            transition: background 0.3s ease;
+            margin-top: 15px;
+        }
+    
+        button:hover {
+            background: #ff0000;
+        }
+    
+        .header, .footer-main {
+            font-family: 'Mulish', sans-serif;
+            font-size: 16px;
+        }
+    
+        .header {
+            padding: 15px;
+            background-color: #000;
+            color: #ffffff;
+            text-align: center;
+            border-bottom: 1px solid #e6edf3;
+        }
+    
+        .footer-main {
+            margin-top: 30px;
+            text-align: center;
+            color: #e6edf3;
+            font-size: 0.9rem;
+            border-top: 1px solid #e6edf3;
+            padding: 10px;
+        }
+    </style>
+    
+</head>
+<body>
+    <div class="header">
+        <div class="nav-main-container">
+            <nav class="nav-main">
+                <a href="index.html">Strona główna</a>
+                <a href="label.html">O Labelu</a>
+                <a href="join.html">Dołącz do nas</a>
+                <a href="help.html">Pomoc</a>
+            </nav>
+        </div>
+    </div>
+
+    <main class="main">
+        <a href="index.html"><img src="maingif.gif" alt="Logo" style="
+        height: 15%; width: 15%; margin-left: auto; margin-right: auto; display: flex; margin-top: 1%; border-radius: 1000px; border: 1px solid transparent; padding: 1px 2px; background-image: linear-gradient(90deg, white, black, red); 
+        background-size: 300% 300%; animation: borderAnimation 5s ease-in-out infinite; background-clip: border-box; -webkit-background-clip: border-box; text-align: center;"></a><br>
+
+        <article class="text">
+            Chciałbyś dołączyć do <span class="animacja">.100pens Label</span>? <br> Wypełnij poniższy formularz :)
+        </article>
+        <br>
+<form action="https://formspree.io/f/meoonroy" method="POST">
+<label>
+  Twój email:
+  <input type="email" name="email">
+</label>
+<label>
+  Twoja wiadomość:
+  <textarea name="message"></textarea>
+</label>
+<button type="submit">Wyślij (i czekaj c:)</button>
+</form>
+    </main><br>
+
+    <div class="footer-main">
+        &copy; 2025 .100PENS Label. Wszelkie prawa zastrzeżone.
+    </div>
+    <script>
+        let lastScrollY = window.scrollY;
+        const nav = document.querySelector('.nav-main-container');
+        
+        if (lastScrollY <= 100) {
+            nav.classList.add('show');
+        }
+        
+        window.addEventListener('scroll', () => {
+            if (window.scrollY > lastScrollY) {
+        
+                nav.classList.add('show');
+            } else if (window.scrollY <= 100) {
+        
+                nav.classList.add('show');
+            } else {
+        
+                nav.classList.remove('show');
+            }
+            lastScrollY = window.scrollY;
+        });
+        
+            
+    </script>
+    
+</body>
+</html>

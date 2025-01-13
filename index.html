@@ -1,49 +1,107 @@
-<!DOCTYPE HTML>
-<html>
+<!DOCTYPE html>
+<html lang="pl">
 <head>
-<meta name="viewport" content="width=device-width, initial-scale=1">
-<style>
-p {
-  text-align: center;
-  font-size: 60px;
-  margin-top: 0px;
-}
-</style>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>.100PENS - Najlepsi z najmłodszych!</title>
+    <link rel="stylesheet" href="style.css" type="text/css">
+    <!---->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Mulish:ital,wght@0,200..1000;1,200..1000&display=swap" rel="stylesheet">
+    <style>
+        @keyframes borderAnimation {
+            0% {
+                background-position: 0% 50%;
+            }
+            50% {
+                background-position: 100% 50%;
+            }
+            100% {
+                background-position: 0% 50%;
+            }
+        }
+        </style>
 </head>
 <body>
+    <div class="header">
+        <div class="nav-main-container">
+            <nav class="nav-main">
+                <a href="index.html">Strona główna</a>
+                <a href="label.html">O Labelu</a>
+                <a href="join.html">Dołącz do nas</a>
+                <a href="help.html">Pomoc</a>
+            </nav>
+        </div>
+    </div>
 
-<p id="demo"></p>
+    <main class="main">
+        <a href="index.html"><img src="maingif.gif" alt="Logo" style="
+        height: 15%; width: 15%; margin-left: auto; margin-right: auto; display: flex; margin-top: 1%; border-radius: 1000px; border: 1px solid transparent; padding: 1px 2px; background-image: linear-gradient(90deg, white, black, red); 
+        background-size: 300% 300%; animation: borderAnimation 5s ease-in-out infinite; background-clip: border-box; -webkit-background-clip: border-box; text-align: center;"></a><br>
 
-<script>
-// Set the date we're counting down to
-var countDownDate = new Date("Jan 1, 2024 00:00:00").getTime();
+        <article class="text">
+            <span class="animacja">.100pens Label</span> to miejsce, gdzie młode talenty spotykają się, by tworzyć coś naprawdę wyjątkowego.
+        </article>
+        <br>
+        <article class="cel">
+            <h1><u>Nasz cel?</u></h1>
+            <main class="miejsce-kol">
+                <div class="kolumna1">
+                    <header>Wspierać świeże brzmienia</header>
+                    <span style="font-size: 80%; padding-left: 5%; padding-right: 5%;"><span class="animacja">To nasza pasja!</span><br> Promujemy młode talenty, które mają odwagę eksperymentować i tworzyć coś nowego. Dajemy im przestrzeń, by rozwijali swoje unikalne dźwięki i wnosili świeżość do świata muzyki. Wierzymy, że to właśnie te nowe brzmienia mają moc zmieniać muzyczną scenę i inspirować przyszłe pokolenia!</span>
+                </div>
+                <div class="kolumna2">
+                    <header>Pomagać artystom w rozwinięciu ich skrzydeł</header>
+                    <span><span class="animacja">To nasza misja!</span><br> Dajemy młodym twórcom szansę na pełne wykorzystanie ich potencjału. Umożliwiamy im rozwój, dostarczamy narzędzi, wiedzy i wsparcia, by mogli wzbić się wysoko i osiągnąć sukces, który przerasta ich marzenia. Wspieramy ich na każdym etapie kariery, pomagając im rozwinąć skrzydła i podbić świat muzyki!</span>
+                </div>
+                
+            </main>
+        </article>
+    </main><br>
+    <main class="mainmain">
+        <article class="quote-section">
+            <blockquote class="quote">
+                "Zaczęło się od pasji, a teraz budujemy przestrzeń, która łączy ludzi z zajawką na muzykę.."
+                <footer>- .100PENS Team</footer>
+            </blockquote>
+        </article>
+        <article class="quote-section">
+            <blockquote class="quote">
+                Jesteśmy tu dla tych, którzy chcą wyrazić siebie przez dźwięki – od amatorów, po doświadczonych artystów. Nasze działania to nie tylko produkcja muzyki, ale też wsparcie, promocja i współpraca, która pozwala każdemu pokazać, na co go stać.
+                <footer>- .100PENS Team</footer>
+            </blockquote>
+        </article>
+        <article class="main1" style="padding-bottom: 15%;"><br><br>
+            <a href="join.html" style="font-size: 100%;">Dołącz do nas</a>, jeśli masz <b>talent</b>, <u>pasję</u> i <i>chęć zostawienia swojego śladu na muzycznej scenie</i>. <span class="animacja">W .100pens Label wszystko jest możliwe.</span>
+        </article>
+    </main>
+    <div class="footer-main">
+        &copy; 2025 .100PENS Label. Wszelkie prawa zastrzeżone.
+    </div>
+    <script>
+let lastScrollY = window.scrollY;
+const nav = document.querySelector('.nav-main-container');
 
-// Update the count down every 1 second
-var x = setInterval(function() {
+if (lastScrollY <= 100) {
+    nav.classList.add('show');
+}
 
-  // Get today's date and time
-  var now = new Date().getTime();
+window.addEventListener('scroll', () => {
+    if (window.scrollY > lastScrollY) {
 
-  // Find the distance between now and the count down date
-  var distance = countDownDate - now;
+        nav.classList.add('show');
+    } else if (window.scrollY <= 100) {
 
-  // Time calculations for days, hours, minutes and seconds
-  var days = Math.floor(distance / (1000 * 60 * 60 * 24));
-  var hours = Math.floor((distance % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
-  var minutes = Math.floor((distance % (1000 * 60 * 60)) / (1000 * 60));
-  var seconds = Math.floor((distance % (1000 * 60)) / 1000);
+        nav.classList.add('show');
+    } else {
 
-  // Output the result in an element with id="demo"
-  document.getElementById("demo").innerHTML = days + "d " + hours + "h "
-  + minutes + "m " + seconds + "s ";
+        nav.classList.remove('show');
+    }
+    lastScrollY = window.scrollY;
+});
 
-  // If the count down is over, write some text 
-  if (distance < 0) {
-    clearInterval(x);
-    document.getElementById("demo").innerHTML = "EXPIRED";
-  }
-}, 1000);
-</script>
-
+    </script>
+    
 </body>
 </html>
